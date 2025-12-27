@@ -1,3 +1,107 @@
-baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+baseURL: "http://localhost:1313/"
+languageCode: "en-us"
+title: Promit Panja
+pagination: 
+  pagerSize: 20
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# googleAnalytics: G-R2M9JEHJLQ
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Promit Panja
+  description: "Doctoral Researcher"
+  keywords: ["Formal Methods", "Logic", "Dynamical Systems"]
+  author: Me
+  images: ["/img/ppanja.jpg"]
+  defaultTheme: dark
+  disableThemeToggle: true   # remove if you want light/dark later
+
+  profileMode:
+    enabled: false
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/trash627"
+    - name: email
+      url: "mailto:promit.panja@kit.edu"
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?hl=en&user=Zb7exfEAAAAJ"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/promit-panja/"
+
+  homeInfoParams:
+    Title: Promit Panja
+    Content: |
+      I am a second-year PhD student in Computer Science at the Karlsruhe Institute of Technology (KIT) advised 
+      by Prof. [André Platzer](https://symbolaris.com/index.html). My current research involves devoloping logical 
+      methods for proving safety of continuous and hybdrid dynamical systems.
+
+      Prior to joining KIT, I was a master's student at Virginia Tech, USA primarily researching safety in robotic systems.
+
+    imageUrl: "/img/ppanja.jpg"
+    imageTitle: profile
+    imageWidth: 140
+    imageHeight: 140
+
+
+  # Clean academic defaults
+  ShowOnlySelectedPubs: false
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: false
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
+
+  label:
+    text:
+    icon: /apple-touch-icon.png
+    iconHeight: 
+
+menu:
+  main:
+    - identifier: research
+      name: Research
+      url: /research/
+      weight: 10
+    # - identifier: publications
+    #   name: Publications
+    #   url: /publications/
+    #   weight: 20
+    - identifier: cv
+      name: CV
+      url: /cv/
+      weight: 30
+    - identifier: portal
+      name: Portal
+      url: /portal/
+      weight: 40
+

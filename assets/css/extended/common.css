@@ -1,0 +1,99 @@
+
+
+/* Remove the HomeInfo "card/box" look */
+.home-info {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  /* Two-column layout: text left, image right */
+  .home-info__inner {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  /* Let text take most space */
+  .home-info__text {
+    flex: 1 1 auto;
+  }
+  
+  /* Responsive: stack on small screens */
+  @media (max-width: 768px) {
+    .home-info__inner {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+    .home-info__media img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  
+  .row {
+    display: flex;
+}
+
+.profile-text {
+    text-align: justify;
+    text-justify: inter-word;
+    flex: 1;
+}
+
+.profile-text p {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+.profile-img {
+    margin-left: 5%;
+}
+
+.profile-img img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--ctp-lavender);
+}
+
+@media screen and (max-width: 600px) {
+    .profile-img {
+      display: none;
+    }
+}
+
+.pub-entry {
+    display: flex;
+}
+
+.pub-entry a:hover {
+    text-decoration: underline;
+}
+
+.pub-entry .entry-cover {
+    margin: auto 3% auto 0;
+    flex: 2;
+}
+
+.pub-entry .entry-content {
+    -webkit-line-clamp: 5;
+}
+
+.pub-entry .venue {
+    margin-top: 0.5em;
+    color:midnightblue;
+}
+
+@media screen and (max-width: 600px) {
+    .pub-entry .entry-cover {
+        margin: auto 5% auto 0;
+        flex: 3;
+    }
+}
+
+.pub-meta {
+    margin-top: auto;
+    margin-bottom: auto;
+    flex: 5;
+}
