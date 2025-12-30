@@ -1,5 +1,5 @@
 /* ------------------------------
-   Catppuccin Mocha palette
+   Catppuccin Macchiato palette
 -------------------------------- */
 :root {
     --ctp-rosewater: #f4dbd6;
@@ -40,18 +40,18 @@
 :root[data-theme="dark"] {
   --theme: var(--ctp-crust);
   --entry: var(--ctp-mantle);
-  --primary: var(--ctp-text);
-  --secondary: var(--ctp-subtext0);
+  --primary: var(--ctp-mauve);
+  --secondary: var(--ctp-subtext1);
   --tertiary: var(--ctp-subtext0);
 
   --title: var(--ctp-text);
-  --content: var(--ctp-surface2);
+  --content: var(--ctp-subtext1);
 
   --border: var(--ctp-surface0);
   --radius: 14px;
 
-  --link: var(--ctp-mauve);
-  --link-hover: var(--ctp-lavender);
+  --link: var(--ctp-flamingo);
+  --link-hover: var(--ctp-mauve);
 
   --hljs-bg: var(--ctp-crust);
   --code-bg: var(--ctp-crust);
@@ -64,6 +64,10 @@
   -------------------------------- */
 a {
   color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
 }
 
 /* Profile card */

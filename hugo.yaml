@@ -42,16 +42,17 @@ params:
   homeInfoParams:
     Title: Promit Panja
     Content: |
-      I am a second-year PhD student in Computer Science at the Karlsruhe Institute of Technology (KIT) advised 
+      I am a second-year PhD student in Computer Science at the Karlsruhe Institute of Technology (KIT), Germany, 
+      and part of the [Logic of Autonomous Dynamical Systems](https://logic.kastel.kit.edu/) research group advised 
       by Prof. [André Platzer](https://symbolaris.com/index.html). My current research involves devoloping logical 
       methods for proving safety of continuous and hybdrid dynamical systems.
 
-      Prior to joining KIT, I was a master's student at Virginia Tech, USA primarily researching safety in robotic systems.
+      Prior to joining KIT, I was a master's student at Virginia Tech, USA, primarily researching safety in robotic systems.
 
     imageUrl: "/img/ppanja.jpg"
     imageTitle: profile
-    imageWidth: 140
-    imageHeight: 140
+    imageWidth: 200
+    imageHeight: 200
 
 
   # Clean academic defaults
@@ -100,8 +101,8 @@ menu:
       name: CV
       url: /cv/
       weight: 30
-    - identifier: portal
-      name: Portal
-      url: /portal/
-      weight: 40
+    # - identifier: portal
+    #   name: Portal
+    #   url: /portal/
+    #   weight: 40
 
