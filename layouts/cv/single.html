@@ -1,0 +1,23 @@
+{{- define "main" }}
+<article class="cv-page">
+  <header class="page-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+  </header>
+  
+  {{- with .Params.pdf_url }}
+  <div class="cv-pdf-download">
+    <a href="{{ . }}" target="_blank" rel="noopener" class="pdf-download-btn">
+      <span class="btn-icon">📄</span>
+      <span>Download PDF (opens in new tab)</span>
+    </a>
+  </div>
+  {{- end }}
+  
+  <div class="cv-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+</article>
+{{- end }}

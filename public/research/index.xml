@@ -11,7 +11,18 @@
     </image>
     <generator>Hugo -- 0.153.2</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Thu, 10 Apr 2025 10:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Correct-by-Construction Barrier Certificate Synthesis</title>
+      <link>http://localhost:1313/research/autonomous-driving-frameworks/</link>
+      <pubDate>Thu, 10 Apr 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/research/autonomous-driving-frameworks/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Autonomous driving presents unique challenges for formal verification due to the complexity of the environment, interaction with human drivers, and stringent safety requirements. This project develops domain-specific logical frameworks tailored to autonomous driving scenarios.&lt;/p&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Self-driving cars must navigate complex traffic scenarios while guaranteeing safety. Traditional testing and simulation cannot provide the exhaustive coverage needed for safety certification. Formal methods offer a path to rigorous safety guarantees.&lt;/p&gt;
+&lt;p&gt;However, existing formalisms struggle with the richness of driving scenarios, including continuous vehicle dynamics, discrete decision-making, and multi-agent interactions.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -41,16 +41,16 @@
   --theme: var(--ctp-crust);
   --entry: var(--ctp-mantle);
   --primary: var(--ctp-mauve);
-  --secondary: var(--ctp-subtext1);
-  --tertiary: var(--ctp-subtext0);
+  --secondary: var(--ctp-text);
+  --tertiary: var(--ctp-text);
 
   --title: var(--ctp-text);
-  --content: var(--ctp-subtext1);
+  --content: var(--ctp-text);
 
   --border: var(--ctp-surface0);
   --radius: 14px;
 
-  --link: var(--ctp-flamingo);
+  --link: var(--ctp-subtext0);
   --link-hover: var(--ctp-mauve);
 
   --hljs-bg: var(--ctp-crust);

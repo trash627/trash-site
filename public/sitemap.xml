@@ -2,10 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/portal/</loc>
-    <lastmod>2025-12-26T21:06:04+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2026-06-27T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publications/</loc>
+    <lastmod>2026-06-27T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/teaching/</loc>
+    <lastmod>2026-06-27T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publications/safety-verification-hybrid-systems/</loc>
+    <lastmod>2026-06-15T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/research/dl-hybrid-systems/</loc>
+    <lastmod>2026-05-15T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/research/certified-verification-algorithms/</loc>
+    <lastmod>2026-04-20T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/research/autonomous-driving-frameworks/</loc>
+    <lastmod>2026-03-10T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/research/safety-critical-robot-control/</loc>
+    <lastmod>2026-02-15T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/teaching/logic-verification-ws2025/</loc>
+    <lastmod>2026-01-15T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portal/</loc>
     <lastmod>2025-12-26T21:06:04+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/cv/</loc>
@@ -13,6 +37,18 @@
   </url><url>
     <loc>http://localhost:1313/research/</loc>
     <lastmod>2025-12-26T21:04:01+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publications/formal-synthesis-autonomous-vehicles/</loc>
+    <lastmod>2025-11-20T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/teaching/hybrid-systems-ss2025/</loc>
+    <lastmod>2025-09-15T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publications/nonlinear-control-bipedal-locomotion/</loc>
+    <lastmod>2024-05-10T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/teaching/robotics-fall2023/</loc>
+    <lastmod>2023-08-20T10:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Publications on Promit Panja</title>
+    <link>http://localhost:1313/publications/</link>
+    <description>Recent content in Publications on Promit Panja</description>
+    <image>
+      <title>Promit Panja</title>
+      <url>http://localhost:1313/img/ppanja.jpg</url>
+      <link>http://localhost:1313/img/ppanja.jpg</link>
+    </image>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Nov 2025 10:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Correct-by-Construction Barrier Certificate Synthesis for Safety Verification of Continuous Dynamical Systems</title>
+      <link>http://localhost:1313/publications/correct-by-construction-barrier/</link>
+      <pubDate>Thu, 20 Nov 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/publications/correct-by-construction-barrier/</guid>
+      <description>&lt;p&gt;We develop a formal synthesis procedure for generating provably safe controllers for autonomous vehicles operating in uncertain environments.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

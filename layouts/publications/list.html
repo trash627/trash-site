@@ -1,0 +1,77 @@
+{{- define "main" }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description | markdownify }}</div>
+  {{- end }}
+</header>
+
+<div class="publications-list">
+  {{- $pubs := where .Site.RegularPages "Section" "publications" }}
+  {{- $pubs = sort $pubs "Date" "desc" }}
+  
+  {{- range $pubs }}
+  <div class="pub-entry">
+    <div class="pub-content">
+      <h3 class="pub-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <div class="pub-authors">{{ delimit .Params.authors ", " }}</div>
+      <div class="pub-venue">{{ .Params.venue }}, {{ .Params.year }}</div>
+      
+      <div class="pub-actions">
+        <button class="pub-action-btn" onclick="copyBibtex(this)" data-bibtex="{{ .Params.bibtex | htmlEscape }}">
+          <span class="btn-icon">📋</span>
+          <span class="btn-text">Copy BibTeX</span>
+        </button>
+        
+        {{- with .Params.pdf }}
+        <a class="pub-action-btn" href="{{ . }}" target="_blank" rel="noopener">
+          <span class="btn-icon">📄</span>
+          <span class="btn-text">PDF</span>
+        </a>
+        {{- end }}
+        
+        {{- with .Params.slides }}
+        <a class="pub-action-btn" href="{{ . }}" target="_blank" rel="noopener">
+          <span class="btn-icon">🎬</span>
+          <span class="btn-text">Slides</span>
+        </a>
+        {{- end }}
+        
+        {{- with .Params.github }}
+        <a class="pub-action-btn" href="{{ . }}" target="_blank" rel="noopener">
+          <span class="btn-icon">💻</span>
+          <span class="btn-text">Code</span>
+        </a>
+        {{- end }}
+        
+        {{- with .Params.doi }}
+        <a class="pub-action-btn" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
+          <span class="btn-icon">🔗</span>
+          <span class="btn-text">DOI</span>
+        </a>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+  {{- end }}
+</div>
+
+<script>
+function copyBibtex(button) {
+  const bibtex = button.getAttribute('data-bibtex');
+  navigator.clipboard.writeText(bibtex).then(() => {
+    const originalText = button.querySelector('.btn-text').textContent;
+    button.querySelector('.btn-text').textContent = 'Copied!';
+    button.classList.add('copied');
+    setTimeout(() => {
+      button.querySelector('.btn-text').textContent = originalText;
+      button.classList.remove('copied');
+    }, 2000);
+  }).catch(err => {
+    console.error('Failed to copy:', err);
+  });
+}
+</script>
+
+{{- end }}

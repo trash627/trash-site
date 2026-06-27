@@ -1,0 +1,42 @@
+{{- define "main" }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description | markdownify }}</div>
+  {{- end }}
+</header>
+
+<div class="teaching-list">
+  {{- $courses := where .Site.RegularPages "Section" "teaching" }}
+  {{- $courses = sort $courses "Date" "desc" }}
+  
+  {{- $currentSemester := "" }}
+  {{- range $courses }}
+    {{- if ne $currentSemester .Params.semester }}
+      {{- if $currentSemester }}</div></div>{{- end }}
+      <div class="semester-group">
+        <h2 class="semester-title">{{ .Params.semester }}</h2>
+        <div class="courses-container">
+      {{- $currentSemester = .Params.semester }}
+    {{- end }}
+    
+    <div class="course-entry">
+      <h3 class="course-title">{{ .Title }}</h3>
+      <div class="course-meta">
+        <span class="course-institution">{{ .Params.institution }}</span>
+        <span class="course-role">{{ .Params.role }}</span>
+      </div>
+      {{- with .Params.description }}
+      <p class="course-description">{{ . | markdownify }}</p>
+      {{- end }}
+      {{- with .Params.materials_link }}
+      <a class="course-materials" href="{{ . }}" target="_blank" rel="noopener">Course Materials →</a>
+      {{- end }}
+    </div>
+  {{- end }}
+  
+  {{- if $currentSemester }}</div></div>{{- end }}
+</div>
+
+{{- end }}

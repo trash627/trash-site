@@ -1,0 +1,55 @@
+{{- $limit := .Get "limit" | default 10 }}
+{{- $pubs := where .Site.RegularPages "Section" "publications" }}
+{{- $pubs = sort $pubs "Date" "desc" }}
+{{- $pubs = first $limit $pubs }}
+
+<ul class="cv-publications">
+  {{- range $pubs }}
+  <li>
+    <strong>{{ .Title }}</strong><br/>
+    {{ delimit .Params.authors ", " }}<br/>
+    <em>{{ .Params.venue }}</em>, {{ .Params.year }}
+    {{- with .Params.doi }}
+    <br/><a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI: {{ . }}</a>
+    {{- end }}
+  </li>
+  {{- end }}
+</ul>
+
+<style>
+.cv-publications {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.cv-publications li {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  text-indent: -1rem;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cv-publications strong {
+  color: var(--title);
+  font-weight: 600;
+}
+
+.cv-publications em {
+  color: var(--tertiary);
+  font-style: italic;
+}
+
+.cv-publications a {
+  color: var(--link);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.cv-publications a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+</style>
