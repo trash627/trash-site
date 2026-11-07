@@ -1,5 +1,14 @@
+- date: "2026-10-27"
+  content: "Gave a talk at [_LPAR 2026, Spetses Island, Greece_](https://easychair.org/smart-program/LPAR-26/)."
+
+- date: "2026-08-21"
+  content: "Paper on [_comparison invariants for verifying control invariance_](https://easychair.org/publications/paper/9ZkQ) accepted at LPAR 2026!"
+
+- date: "2025-12-12"
+  content: "Gave a talk at [_CDC 2026, Rio de Janeiro, Brazil_](https://cdc2025.ieeecss.org/)."
+
 - date: "2025-07-15"
-  content: "Paper on correct-by-construction barrier certificate synthesis accepted at [CDC 2025](https://ieeexplore.ieee.org/document/11312663)!"
+  content: "Paper on [_correct-by-construction barrier certificate synthesis_](https://ieeexplore.ieee.org/document/11312663) accepted at CDC 2025!"
 
 - date: "2024-12-01"
   content: "Started as Doctoral Researcher at Karlsruhe Institute of Technology."

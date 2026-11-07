@@ -1,0 +1,61 @@
+{{- /* One publication entry.
+     Call with: (dict "page" . "full" true|false)
+     full = true  -> publications page: Copy BibTeX and DOI buttons
+     full = false -> home page "Selected Publications": no BibTeX or DOI
+     The image (params.image, path under static/) sits on the left; a placeholder
+     keeps the space when a publication has no image yet. */ -}}
+{{- $p := .page }}
+{{- $full := .full }}
+<div class="pub-entry">
+  <div class="pub-image">
+    {{- with $p.Params.image }}
+    <img src="{{ . | absURL }}" alt="{{ $p.Title }}" loading="lazy" />
+    {{- else }}
+    <div class="project-placeholder"></div>
+    {{- end }}
+  </div>
+  <div class="pub-content">
+    <h3 class="pub-title">{{ $p.Title }}</h3>
+    <div class="pub-authors">{{ delimit $p.Params.authors ", " }}</div>
+    <div class="pub-venue">{{ $p.Params.venue }}, {{ $p.Params.year }}</div>
+
+    <div class="pub-actions">
+      {{- if $full }}
+      <button class="pub-action-btn" onclick="copyBibtex(this)" data-bibtex="{{ $p.Params.bibtex | htmlEscape }}">
+        <span class="btn-icon">📋</span>
+        <span class="btn-text">Copy BibTeX</span>
+      </button>
+      {{- end }}
+
+      {{- with $p.Params.pdf }}
+      <a class="pub-action-btn" href="{{ . }}" target="_blank" rel="noopener">
+        <span class="btn-icon">📄</span>
+        <span class="btn-text">PDF</span>
+      </a>
+      {{- end }}
+
+      {{- with $p.Params.slides }}
+      <a class="pub-action-btn" href="{{ . }}" target="_blank" rel="noopener">
+        <span class="btn-icon">🎬</span>
+        <span class="btn-text">Slides</span>
+      </a>
+      {{- end }}
+
+      {{- with $p.Params.github }}
+      <a class="pub-action-btn" href="{{ . }}" target="_blank" rel="noopener">
+        <span class="btn-icon">💻</span>
+        <span class="btn-text">Code</span>
+      </a>
+      {{- end }}
+
+      {{- if $full }}
+      {{- with $p.Params.doi }}
+      <a class="pub-action-btn" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
+        <span class="btn-icon">🔗</span>
+        <span class="btn-text">DOI</span>
+      </a>
+      {{- end }}
+      {{- end }}
+    </div>
+  </div>
+</div>

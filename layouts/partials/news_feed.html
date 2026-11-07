@@ -1,13 +1,39 @@
-{{- with site.Data.news }}
+{{- with hugo.Data.news }}
+{{- $news := sort . "date" "desc" }}
 <div class="news-section">
   <h3 class="news-title">Latest News</h3>
   <div class="news-list">
-    {{- range first 5 (sort . "date" "desc") }}
+    {{- range first 5 $news }}
     <div class="news-item">
       <span class="news-date">{{ .date }}</span>
       <span class="news-content">{{ .content | markdownify }}</span>
     </div>
     {{- end }}
   </div>
+  {{- if gt (len $news) 5 }}
+  <div id="old-news" class="news-list news-old" hidden>
+    {{- range after 5 $news }}
+    <div class="news-item">
+      <span class="news-date">{{ .date }}</span>
+      <span class="news-content">{{ .content | markdownify }}</span>
+    </div>
+    {{- end }}
+  </div>
+  <button type="button" class="news-toggle" aria-expanded="false" aria-controls="old-news"
+    data-label-more="Old news" data-label-less="Hide old news">Old news</button>
+  <script>
+  (function () {
+    var btn = document.querySelector('.news-toggle');
+    var old = document.getElementById('old-news');
+    if (!btn || !old) return;
+    btn.addEventListener('click', function () {
+      var show = old.hasAttribute('hidden');
+      if (show) { old.removeAttribute('hidden'); } else { old.setAttribute('hidden', ''); }
+      btn.setAttribute('aria-expanded', show ? 'true' : 'false');
+      btn.textContent = show ? btn.dataset.labelLess : btn.dataset.labelMore;
+    });
+  })();
+  </script>
+  {{- end }}
 </div>
 {{- end }}

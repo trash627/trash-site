@@ -1,104 +1,105 @@
-/* ------------------------------
-   Catppuccin Macchiato palette
--------------------------------- */
-:root {
-    --ctp-rosewater: #f4dbd6;
-    --ctp-flamingo:  #f0c6c6;
-    --ctp-pink:      #f5bde6;
-    --ctp-mauve:     #c6a0f6;
-    --ctp-red:       #ed8796;
-    --ctp-maroon:    #ee99a0;
-    --ctp-peach:     #f5a97f;
-    --ctp-yellow:    #eed49f;
-    --ctp-green:     #a6da95;
-    --ctp-teal:      #8bd5ca;
-    --ctp-sky:       #91d7e3;
-    --ctp-sapphire:  #7dc4e4;
-    --ctp-blue:      #8aadf4;
-    --ctp-lavender:  #b7bdf8;
-  
-    --ctp-text:      #cad3f5;
-    --ctp-subtext1:  #b8c0e0;
-    --ctp-subtext0:  #a5adcb;
+/* ------------------------------------------------------------------
+   Catppuccin Mocha theme (dark only).
 
-    --ctp-overlay2: #939ab7;
-    --ctp-overlay1: #8087a2;
-    --ctp-overlay0: #6e738d;
-  
-    --ctp-surface2:  #5b6078;
-    --ctp-surface1:  #494d64;
-    --ctp-surface0:  #363a4f;
-  
-    --ctp-base:      #24273a;
-    --ctp-mantle:    #1e2030;
-    --ctp-crust:     #181926;
-  }
-  
-  /* ------------------------------
-     PaperMod variable overrides
-  -------------------------------- */
+   Colour roles follow the Catppuccin style guide:
+   https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md
+
+   Everything here is scoped to [data-theme="dark"], so the light theme
+   keeps PaperMod's default look.
+------------------------------------------------------------------- */
+
 :root[data-theme="dark"] {
-  --theme: var(--ctp-crust);
-  --entry: var(--ctp-mantle);
-  --primary: var(--ctp-mauve);
-  --secondary: var(--ctp-text);
-  --tertiary: var(--ctp-text);
+  /* Palette: Mocha */
+  --ctp-rosewater: #f5e0dc;
+  --ctp-flamingo:  #f2cdcd;
+  --ctp-pink:      #f5c2e7;
+  --ctp-mauve:     #cba6f7;
+  --ctp-red:       #f38ba8;
+  --ctp-maroon:    #eba0ac;
+  --ctp-peach:     #fab387;
+  --ctp-yellow:    #f9e2af;
+  --ctp-green:     #a6e3a1;
+  --ctp-teal:      #94e2d5;
+  --ctp-sky:       #89dceb;
+  --ctp-sapphire:  #74c7ec;
+  --ctp-blue:      #89b4fa;
+  --ctp-lavender:  #b4befe;
 
-  --title: var(--ctp-text);
-  --content: var(--ctp-text);
+  --ctp-text:      #cdd6f4;
+  --ctp-subtext1:  #bac2de;
+  --ctp-subtext0:  #a6adc8;
 
-  --border: var(--ctp-surface0);
-  --radius: 14px;
+  --ctp-overlay2:  #9399b2;
+  --ctp-overlay1:  #7f849c;
+  --ctp-overlay0:  #6c7086;
 
-  --link: var(--ctp-subtext0);
-  --link-hover: var(--ctp-mauve);
+  --ctp-surface2:  #585b70;
+  --ctp-surface1:  #45475a;
+  --ctp-surface0:  #313244;
 
+  --ctp-base:      #1e1e2e;
+  --ctp-mantle:    #181825;
+  --ctp-crust:     #11111b;
+
+  /* Background panes */
+  --theme: var(--ctp-mantle);          /* Background Pane: Base */
+  --entry: var(--ctp-crust);        /* Secondary Panes: Mantle */
+  --code-bg: var(--ctp-crust);       /* Secondary Panes: Crust */
+  --code-block-bg: var(--ctp-crust);
   --hljs-bg: var(--ctp-crust);
-  --code-bg: var(--ctp-crust);
 
+  /* Surface elements and borders */
+  --border: var(--ctp-mantle);
+  --surface-0: var(--ctp-surface0);
+  --surface-1: var(--ctp-surface1);
+
+  /* Typography */
+  --content: var(--ctp-text);        /* Body Copy */
+  --title: var(--ctp-text);          /* Main Headline */
+  --body-copy: var(--ctp-text);
+  --secondary: var(--ctp-subtext1);  /* Sub-headlines, labels */
+  --tertiary: var(--ctp-subtext0);   /* Subtle */
+
+  /* Accents */
+  --primary: var(--ctp-mauve);
+  --accent: var(--ctp-lavender);         /* Links, URLs, tags */
+  --accent-hover: var(--ctp-sapphire);
+  --on-accent: var(--ctp-base);      /* Base text on accent backgrounds */
+  --success: var(--ctp-green);       /* Success */
+
+  --radius: 14px;
   color-scheme: dark;
 }
-  
-  /* ------------------------------
-     Subtle academic polish
-  -------------------------------- */
-a {
-  color: var(--link);
+
+/* Links use Blue; hover shifts to a neighbouring blue. */
+:root[data-theme="dark"] a {
+  color: var(--accent);
 }
 
-a:hover {
-  color: var(--link-hover);
-}
-
-/* Profile card */
-.profile {
-  border: 1px solid var(--border);
-  box-shadow: none;
-}
-
-/* Profile buttons */
-.profile .buttons a.button {
-  background: var(--ctp-mantle);
-  border: 1px solid var(--border);
-}
-.profile .buttons a.button:hover {
-  background: var(--ctp-surface0);
-}
-
-/* Post cards */
-.post-entry, .first-entry {
-  border: 1px solid var(--border);
-  box-shadow: none;
+:root[data-theme="dark"] a:hover {
+  color: var(--accent-hover);
 }
 
 /* Inline code */
-code {
+:root[data-theme="dark"] code {
   background: var(--code-bg);
   border: 1px solid var(--border);
 }
 
-/* Text selection */
-::selection {
-  background: var(--ctp-surface1);
+/* Selection: Overlay 2 at 30% opacity (style guide: 20-30%). */
+:root[data-theme="dark"] ::selection {
+  background: color-mix(in srgb, var(--ctp-overlay2) 30%, transparent);
 }
 
+/* Cursor: Rosewater. Applies to the text caret in inputs, e.g. search. */
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] textarea {
+  caret-color: var(--ctp-rosewater);
+}
+
+/* Post and first-entry cards */
+:root[data-theme="dark"] .post-entry,
+:root[data-theme="dark"] .first-entry {
+  border: 1px solid var(--border);
+  box-shadow: none;
+}

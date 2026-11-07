@@ -9,15 +9,37 @@
       <url>http://localhost:1313/img/ppanja.jpg</url>
       <link>http://localhost:1313/img/ppanja.jpg</link>
     </image>
-    <generator>Hugo -- 0.153.2</generator>
+    <generator>Hugo -- 0.169.0</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 21 Oct 2026 10:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Logical Foundations of Cyber-Physical Systems</title>
+      <link>http://localhost:1313/teaching/lfcps-26/</link>
+      <pubDate>Wed, 21 Oct 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/teaching/lfcps-26/</guid>
+      <description>Responsible for conducting recitation lectures, substitute lectures, and grading.</description>
+    </item>
+    <item>
+      <title>Comparison Invariants for Verifying Control Invariance</title>
+      <link>http://localhost:1313/publications/comparison-invariants/</link>
+      <pubDate>Fri, 21 Aug 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/publications/comparison-invariants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Comparison Invariants for Verifying Control Invariance</title>
+      <link>http://localhost:1313/research/comparison-invariants/</link>
+      <pubDate>Wed, 10 Jun 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/research/comparison-invariants/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Correct-by-Construction Barrier Certificate Synthesis for Safety Verification of Continuous Dynamical Systems</title>
       <link>http://localhost:1313/publications/correct-by-construction-barrier/</link>
       <pubDate>Thu, 20 Nov 2025 10:00:00 +0100</pubDate>
       <guid>http://localhost:1313/publications/correct-by-construction-barrier/</guid>
-      <description>&lt;p&gt;We develop a formal synthesis procedure for generating provably safe controllers for autonomous vehicles operating in uncertain environments.&lt;/p&gt;</description>
+      <description></description>
     </item>
     <item>
       <title>Compiler Design</title>
@@ -31,11 +53,7 @@
       <link>http://localhost:1313/research/correct-by-construction-barrier/</link>
       <pubDate>Thu, 10 Apr 2025 10:00:00 +0100</pubDate>
       <guid>http://localhost:1313/research/correct-by-construction-barrier/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Autonomous driving presents unique challenges for formal verification due to the complexity of the environment, interaction with human drivers, and stringent safety requirements. This project develops domain-specific logical frameworks tailored to autonomous driving scenarios.&lt;/p&gt;
-&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
-&lt;p&gt;Self-driving cars must navigate complex traffic scenarios while guaranteeing safety. Traditional testing and simulation cannot provide the exhaustive coverage needed for safety certification. Formal methods offer a path to rigorous safety guarantees.&lt;/p&gt;
-&lt;p&gt;However, existing formalisms struggle with the richness of driving scenarios, including continuous vehicle dynamics, discrete decision-making, and multi-agent interactions.&lt;/p&gt;</description>
+      <description></description>
     </item>
   </channel>
 </rss>

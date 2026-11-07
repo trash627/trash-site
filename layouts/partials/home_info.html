@@ -1,27 +1,3 @@
-<!-- {{- with $.Site.Params.homeInfoParams }}
-<article class="home-info">
-  <div class="home-info__inner">
-    <div class="home-info__text">
-      <header class="entry-header">
-        <h1>{{- .Title -}}</h1>
-      </header>
-
-      <section class="entry-content">
-        {{- .Content | markdownify -}}
-      </section>
-
-      <footer class="entry-footer">
-        {{- partial "social_icons.html" $.Site.Params -}}
-      </footer>
-    </div>
-
-    <div class="home-info__media">
-      <img src="/img/ppanja.jpg" alt="Portrait of {{ $.Site.Title }}" />
-    </div>
-  </div>
-</article>
-{{- end }} -->
-
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
     <header class="entry-header">
@@ -64,13 +40,11 @@
                 {{- end }}
             </div>
         </div>
-        </div>
-        </div>
     </div>
     <footer class="entry-footer">
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </footer>
-    
+
     {{- partial "news_feed.html" . }}
 </article>
 {{- end -}}

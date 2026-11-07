@@ -1,4 +1,18 @@
+/* ------------------------------------------------------------------
+   Colour roles used by the components below.
 
+   The light values (Catppuccin Latte) are set in catppuccin-latte.css and
+   the dark values (Catppuccin Mocha) in catppuccin-mocha.css.
+------------------------------------------------------------------- */
+:root {
+    --accent: var(--primary);
+    --accent-hover: var(--secondary);
+    --surface-0: var(--border);
+    --surface-1: var(--border);
+    --on-accent: var(--theme);
+    --success: var(--primary);
+    --body-copy: var(--secondary);
+}
 
 /* Remove the HomeInfo "card/box" look */
 .home-info {
@@ -6,33 +20,9 @@
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
-  }
-  
-  /* Two-column layout: text left, image right */
-  .home-info__inner {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  /* Let text take most space */
-  .home-info__text {
-    flex: 1 1 auto;
-  }
-  
-  /* Responsive: stack on small screens */
-  @media (max-width: 768px) {
-    .home-info__inner {
-      flex-direction: column-reverse;
-      align-items: flex-start;
-    }
-    .home-info__media img {
-      width: 180px;
-      height: 180px;
-    }
-  }
-  
-  .row {
+}
+
+.row {
     display: flex;
 }
 
@@ -54,58 +44,18 @@
 .profile-img img {
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--ctp-base);
+    border: 4px solid var(--theme);
 }
 
 @media screen and (max-width: 600px) {
     .profile-img {
-      display: none;
+        display: none;
     }
-}
-
-.pub-entry {
-    display: flex;
-}
-
-.pub-entry a:hover {
-    text-decoration: underline;
-}
-
-.pub-entry .entry-cover {
-    margin: auto 3% auto 0;
-    flex: 2;
-}
-
-.pub-entry .entry-content {
-    -webkit-line-clamp: 5;
-}
-
-.pub-entry .venue {
-    margin-top: 0.5em;
-    color:midnightblue;
-}
-
-@media screen and (max-width: 600px) {
-    .pub-entry .entry-cover {
-        margin: auto 5% auto 0;
-        flex: 3;
-    }
-}
-
-.pub-meta {
-    margin-top: auto;
-    margin-bottom: auto;
-    flex: 5;
 }
 
 /* Publications List */
-.publications-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
 .pub-entry {
+    display: flex;
     background: var(--entry);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -113,8 +63,14 @@
     transition: border-color 0.2s ease;
 }
 
-.pub-entry:hover {
-    border-color: var(--primary);
+.pub-entry a:hover {
+    text-decoration: underline;
+}
+
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .pub-content {
@@ -162,29 +118,78 @@
     gap: 0.35rem;
     padding: 0.35rem 0.75rem;
     font-size: 0.8rem;
-    background: var(--ctp-surface0);
+    background: var(--surface-0);
     border: 1px solid var(--border);
     border-radius: 6px;
-    color: var(--text);
+    color: var(--content);
     text-decoration: none;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .pub-action-btn:hover {
-    background: var(--ctp-surface1);
+    background: var(--surface-1);
     border-color: var(--primary);
     color: var(--primary);
 }
 
 .pub-action-btn.copied {
-    background: var(--ctp-green);
-    border-color: var(--ctp-green);
-    color: var(--ctp-base);
+    background: var(--success);
+    border-color: var(--success);
+    color: var(--on-accent);
 }
 
 .btn-icon {
     font-size: 0.9rem;
+}
+
+/* Publication entries: image slot on the left (same size as project cards) */
+.pub-entry {
+    gap: 1rem;
+}
+
+.pub-image {
+    flex: 0 0 120px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.pub-image img,
+.pub-image .project-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pub-image .project-placeholder {
+    background: linear-gradient(135deg, var(--surface-0), var(--surface-1));
+}
+
+.pub-entry .pub-content {
+    flex: 1;
+    min-width: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .pub-entry {
+        flex-direction: column;
+    }
+
+    .pub-image {
+        flex: 0 0 150px;
+        height: 150px;
+    }
+}
+
+/* Section heading (home page: Selected Publications) */
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--title);
+    margin: 2.5rem 0 1rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
 }
 
 /* Research Section */
@@ -202,17 +207,17 @@
 }
 
 .subsection-nav a {
-    color: var(--link);
+    color: var(--accent);
     text-decoration: none;
     padding: 0.5rem 1rem;
-    background: var(--ctp-surface0);
+    background: var(--surface-0);
     border-radius: 8px;
     font-size: 0.9rem;
     transition: all 0.2s ease;
 }
 
 .subsection-nav a:hover {
-    background: var(--ctp-surface1);
+    background: var(--surface-1);
     color: var(--primary);
 }
 
@@ -248,11 +253,6 @@
     height: 100%;
 }
 
-.project-card:hover {
-    border-color: var(--primary);
-    transform: translateY(-2px);
-}
-
 .project-image {
     flex: 0 0 120px;
     height: 90px;
@@ -265,7 +265,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: linear-gradient(135deg, var(--ctp-surface0), var(--ctp-surface1));
+    background: linear-gradient(135deg, var(--surface-0), var(--surface-1));
 }
 
 .project-info {
@@ -276,7 +276,7 @@
 .project-title {
     font-size: 1.05rem;
     font-weight: 600;
-    color: var(--title);
+    color: var(--primary);
     margin: 0 0 0.5rem 0;
 }
 
@@ -313,11 +313,11 @@
     .projects-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .project-card {
         flex-direction: column;
     }
-    
+
     .project-image {
         flex: 0 0 150px;
         height: 150px;
@@ -331,19 +331,9 @@
     gap: 2rem;
 }
 
-.semester-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.semester-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--title);
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--border);
-    margin: 0;
+.teaching-section .section-title {
+    font-size: 1.6rem;
+    margin-top: 0;
 }
 
 .courses-container {
@@ -360,14 +350,10 @@
     transition: border-color 0.2s ease;
 }
 
-.course-entry:hover {
-    border-color: var(--primary);
-}
-
 .course-title {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--title);
+    color: var(--primary);
     margin: 0 0 0.5rem 0;
 }
 
@@ -389,13 +375,13 @@
 .course-materials {
     display: inline-block;
     font-size: 0.85rem;
-    color: var(--link);
+    color: var(--accent);
     text-decoration: none;
     font-weight: 500;
 }
 
 .course-materials:hover {
-    color: var(--link-hover);
+    color: var(--accent-hover);
     text-decoration: underline;
 }
 
@@ -408,7 +394,7 @@
 .cv-pdf-download {
     margin: 1.5rem 0;
     padding: 1rem;
-    background: var(--ctp-surface0);
+    background: var(--surface-0);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     text-align: center;
@@ -419,8 +405,8 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: var(--ctp-mauve);
-    color: var(--ctp-base);
+    background: var(--accent);
+    color: var(--on-accent);
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
@@ -428,7 +414,7 @@
 }
 
 .pdf-download-btn:hover {
-    background: var(--ctp-lavender);
+    background: var(--accent-hover);
     transform: translateY(-1px);
 }
 
@@ -457,11 +443,11 @@
 
 .cv-content li {
     margin: 0.35rem 0;
-    color: var(--secondary);
+    color: var(--body-copy);
 }
 
 .cv-content p {
-    color: var(--secondary);
+    color: var(--body-copy);
     line-height: 1.6;
 }
 
@@ -469,7 +455,7 @@
 .news-section {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: var(--ctp-surface0);
+    background: var(--surface-0);
     border: 1px solid var(--border);
     border-radius: var(--radius);
 }
@@ -505,17 +491,17 @@
 .news-content {
     flex: 1;
     font-size: 0.9rem;
-    color: var(--secondary);
+    color: var(--body-copy);
     line-height: 1.5;
 }
 
 .news-content a {
-    color: var(--link);
+    color: var(--accent);
     text-decoration: none;
 }
 
 .news-content a:hover {
-    color: var(--link-hover);
+    color: var(--accent-hover);
     text-decoration: underline;
 }
 
@@ -524,10 +510,37 @@
         flex-direction: column;
         gap: 0.25rem;
     }
-    
+
     .news-date {
         flex: none;
     }
+}
+
+/* Old news: hidden until the toggle is clicked; toggle sits at the bottom */
+.news-old[hidden] {
+    display: none;
+}
+
+.news-old {
+    margin-top: 0.75rem;
+}
+
+.news-toggle {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.85rem;
+    color: var(--accent);
+    background: var(--surface-0);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.news-toggle:hover {
+    background: var(--surface-1);
+    color: var(--accent-hover);
 }
 
 /* Page header description */
@@ -543,16 +556,16 @@
     .pub-actions {
         flex-direction: column;
     }
-    
+
     .pub-action-btn {
         justify-content: center;
     }
-    
+
     .subsection-nav {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .courses-container {
         gap: 0.75rem;
     }

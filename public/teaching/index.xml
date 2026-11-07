@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Teaching on Promit Panja</title>
+    <title>Teaching &amp; Service on Promit Panja</title>
     <link>http://localhost:1313/teaching/</link>
-    <description>Recent content in Teaching on Promit Panja</description>
+    <description>Recent content in Teaching &amp; Service on Promit Panja</description>
     <image>
       <title>Promit Panja</title>
       <url>http://localhost:1313/img/ppanja.jpg</url>
       <link>http://localhost:1313/img/ppanja.jpg</link>
     </image>
-    <generator>Hugo -- 0.153.2</generator>
+    <generator>Hugo -- 0.169.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 May 2025 10:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 10:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Logical Foundations of Cyber-Physical Systems</title>
+      <link>http://localhost:1313/teaching/lfcps-26/</link>
+      <pubDate>Wed, 21 Oct 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/teaching/lfcps-26/</guid>
+      <description>Responsible for conducting recitation lectures, substitute lectures, and grading.</description>
+    </item>
     <item>
       <title>Compiler Design</title>
       <link>http://localhost:1313/teaching/compiler-design-2025/</link>

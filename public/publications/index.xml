@@ -9,16 +9,23 @@
       <url>http://localhost:1313/img/ppanja.jpg</url>
       <link>http://localhost:1313/img/ppanja.jpg</link>
     </image>
-    <generator>Hugo -- 0.153.2</generator>
+    <generator>Hugo -- 0.169.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Nov 2025 10:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 10:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparison Invariants for Verifying Control Invariance</title>
+      <link>http://localhost:1313/publications/comparison-invariants/</link>
+      <pubDate>Fri, 21 Aug 2026 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/publications/comparison-invariants/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Correct-by-Construction Barrier Certificate Synthesis for Safety Verification of Continuous Dynamical Systems</title>
       <link>http://localhost:1313/publications/correct-by-construction-barrier/</link>
       <pubDate>Thu, 20 Nov 2025 10:00:00 +0100</pubDate>
       <guid>http://localhost:1313/publications/correct-by-construction-barrier/</guid>
-      <description>&lt;p&gt;We develop a formal synthesis procedure for generating provably safe controllers for autonomous vehicles operating in uncertain environments.&lt;/p&gt;</description>
+      <description></description>
     </item>
   </channel>
 </rss>

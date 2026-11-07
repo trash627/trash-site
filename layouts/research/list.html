@@ -1,6 +1,5 @@
 {{- define "main" }}
 <header class="page-header">
-  {{- partial "breadcrumbs.html" . }}
   <h1>{{ .Title }}</h1>
   {{- if .Description }}
   <div class="post-description">{{ .Description | markdownify }}</div>
@@ -9,32 +8,25 @@
 
 <div class="research-content">
   {{- $subsections := .Params.subsections }}
-  
-  {{- if $subsections }}
-  <nav class="subsection-nav">
-    {{- range $subsections }}
-    <a href="#{{ .id }}">{{ .name }}</a>
-    {{- end }}
-  </nav>
-  {{- end }}
-  
+
   <div class="research-body">
     {{- if $subsections }}
       {{- range $subsections }}
       <section id="{{ .id }}" class="research-subsection">
         <h2 class="subsection-title">{{ .name }}</h2>
-        
+
         {{- $projects := where $.Site.RegularPages "Section" "research" }}
         {{- $projects = where $projects "Params.subsection" "eq" .id }}
         {{- $projects = sort $projects "Date" "desc" }}
-        
+
         {{- if $projects }}
         <div class="projects-grid">
           {{- range $projects }}
-          <a href="{{ .Permalink }}" class="project-card">
+          <div class="project-card">
             <div class="project-image">
+              {{- $title := .Title }}
               {{- with .Params.image }}
-              <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy" />
+              <img src="{{ . | absURL }}" alt="{{ $title }}" loading="lazy" />
               {{- else }}
               <div class="project-placeholder"></div>
               {{- end }}
@@ -43,7 +35,7 @@
               <h3 class="project-title">{{ .Title }}</h3>
               <p class="project-excerpt">{{ .Params.excerpt | default .Summary | plainify | truncate 120 }}</p>
             </div>
-          </a>
+          </div>
           {{- end }}
         </div>
         {{- else }}
@@ -54,13 +46,14 @@
     {{- else }}
       {{- $projects := where .Site.RegularPages "Section" "research" }}
       {{- $projects = sort $projects "Date" "desc" }}
-      
+
       <div class="projects-grid">
         {{- range $projects }}
-        <a href="{{ .Permalink }}" class="project-card">
+        <div class="project-card">
           <div class="project-image">
+            {{- $title := .Title }}
             {{- with .Params.image }}
-            <img src="{{ . | absURL }}" alt="{{ .Title }}" loading="lazy" />
+            <img src="{{ . | absURL }}" alt="{{ $title }}" loading="lazy" />
             {{- else }}
             <div class="project-placeholder"></div>
             {{- end }}
@@ -69,7 +62,7 @@
             <h3 class="project-title">{{ .Title }}</h3>
             <p class="project-excerpt">{{ .Params.excerpt | default .Summary | plainify | truncate 120 }}</p>
           </div>
-        </a>
+        </div>
         {{- end }}
       </div>
     {{- end }}

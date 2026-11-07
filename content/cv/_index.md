@@ -2,37 +2,40 @@
 date: '2025-12-26T21:04:57+01:00'
 draft: false
 title: 'Curriculum Vitae'
-pdf_url: '/cv/panja_cv.pdf'
 ---
 
 ---
 
 ## Education
 
-**Ph.D., Computer Science** (Expected 2028)  
-Karlsruhe Institute of Technology, Germany  
+**Ph.D., Computer Science** (2024-Present)  
+_Karlsruhe Institute of Technology, Germany_  
 
 **M.S., Computer Engineering** (2024)  
-Virginia Tech, USA  
+_Virginia Tech, USA_  
 
 **B.Tech., Electrical Engineering** (2022)  
-Government College of Engineering Karad, India  
+_Government College of Engineering Karad, India_  
 
 ---
 
 ## Research Experience
 
 **Doctoral Researcher** (2024–Present)  
-Karlsruhe Institute of Technology, Germany  
-- Developing formal verification methods for continuous and hybrid dynamical systems
-- Investigating logical frameworks for proving safety properties of autonomous systems
-- Collaborating with industry partners on safety-critical control synthesis
+_Karlsruhe Institute of Technology, Germany_  
+- Developing formal logical methods for verifying properties of continuous and hybrid dynamical systems.
+- Developing efficient methods for deciding nonlinear real arithmetic arising in hybrid systems theorem proving.
 
-**Graduate Research Assistant** (2022–2024)  
-Virginia Tech, USA  
-- Researched nonlinear control theory with applications to robotics
-- Developed safety guarantees for legged locomotion under model uncertainty
-- Published work at top-tier conferences in control and robotics
+**Research Intern** (Summer 2023)  
+_Louisville Automation and Robotics Research Institute (LARRI), USA_
+- Researched control barrier functions for safety-critical robotics.
+- Implemented researched methods in software and hardware robotics platforms.
+
+**Graduate Research Assistant** (2023–2024)   
+_Virginia Tech, USA_  
+- Worked on developing a robotics simulator for testing control algorithms.
+- Researched optimal global priority assignment in multiprocessors.
+- Implemented researched methods using C++ and IBM-CPLEX MILP solver.
 
 ---
 
@@ -42,7 +45,7 @@ Virginia Tech, USA
 
 ---
 
-## Professional Service
+## Service
 
 **Sub-Reviewer**
 - IJCAR (International Joint Conference on Automated Reasoning), 2026
@@ -56,7 +59,6 @@ Virginia Tech, USA
 
 ## Skills
 
-**Technical Skills**
-- Formal Methods: Differential Dynamic Logic, Sequent Calculus, Theorem Proving, Automated Reasoning
-- Programming: Python, C++, Wolfram Language
+- Formal Methods: Differential Dynamic Logic, Interactive Theorem Proving, Automated Reasoning
+- Programming: Python, C++, Julia, Scala, Wolfram Language
 - Tools: Mathematica

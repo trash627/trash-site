@@ -1,42 +1,69 @@
 {{- define "main" }}
 <header class="page-header">
-  {{- partial "breadcrumbs.html" . }}
   <h1>{{ .Title }}</h1>
   {{- if .Description }}
   <div class="post-description">{{ .Description | markdownify }}</div>
   {{- end }}
 </header>
 
+{{- $sections := .Params.sections }}
+{{- $entries := where .Site.RegularPages "Section" "teaching" }}
+{{- $entries = sort $entries "Date" "desc" }}
+{{- $defaultSection := "" }}
+{{- with $sections }}{{ $defaultSection = (index . 0).id }}{{ end }}
+
 <div class="teaching-list">
-  {{- $courses := where .Site.RegularPages "Section" "teaching" }}
-  {{- $courses = sort $courses "Date" "desc" }}
-  
-  {{- $currentSemester := "" }}
-  {{- range $courses }}
-    {{- if ne $currentSemester .Params.semester }}
-      {{- if $currentSemester }}</div></div>{{- end }}
-      <div class="semester-group">
-        <h2 class="semester-title">{{ .Params.semester }}</h2>
-        <div class="courses-container">
-      {{- $currentSemester = .Params.semester }}
+  {{- range $sections }}
+  {{- $sectionID := .id }}
+  {{- $subtitle := .subtitle }}
+  <section id="{{ $sectionID }}" class="teaching-section">
+    <h2 class="section-title">{{ .name }}</h2>
+
+    {{- $items := slice }}
+    {{- range $entries }}
+    {{- $target := .Params.section | default $defaultSection }}
+    {{- if eq $target $sectionID }}
+    {{- $items = $items | append . }}
     {{- end }}
-    
-    <div class="course-entry">
-      <h3 class="course-title">{{ .Title }}</h3>
-      <div class="course-meta">
-        <span class="course-institution">{{ .Params.institution }}</span>
-        <span class="course-role">{{ .Params.role }}</span>
+    {{- end }}
+
+    {{- if $items }}
+    <div class="courses-container">
+      {{- range $items }}
+      <div class="course-entry">
+        <h3 class="course-title">{{ .Title }}</h3>
+        <div class="course-meta">
+          {{- with .Params.institution }}<span class="course-institution">{{ . }}</span>{{ end }}
+          {{- with .Params.role }}<span class="course-role">{{ . }}</span>{{ end }}
+          {{- with .Params.semester }}<span class="course-semester">{{ . }}</span>{{ end }}
+        </div>
+        {{- with .Params.description }}
+        <p class="course-description">{{ . | markdownify }}</p>
+        {{- end }}
+        {{- with .Params.materials_link }}
+        <a class="course-materials" href="{{ . }}" target="_blank" rel="noopener">Course Materials →</a>
+        {{- end }}
       </div>
-      {{- with .Params.description }}
-      <p class="course-description">{{ . | markdownify }}</p>
-      {{- end }}
-      {{- with .Params.materials_link }}
-      <a class="course-materials" href="{{ . }}" target="_blank" rel="noopener">Course Materials →</a>
       {{- end }}
     </div>
+    {{- else if not .items }}
+    <p class="no-projects">No entries yet.</p>
+    {{- end }}
+
+    {{- with .items }}
+    <div class="cv-content">
+      {{- with $subtitle }}
+      <p><strong>{{ . }}</strong></p>
+      {{- end }}
+      <ul>
+        {{- range . }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+  </section>
   {{- end }}
-  
-  {{- if $currentSemester }}</div></div>{{- end }}
 </div>
 
 {{- end }}

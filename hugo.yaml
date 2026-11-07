@@ -21,10 +21,10 @@ params:
   title: Promit Panja
   description: "Doctoral Researcher"
   keywords: ["Formal Methods", "Logic", "Dynamical Systems"]
-  author: Me
+  author: Promit Panja
   images: ["/img/ppanja.jpg"]
   defaultTheme: dark
-  disableThemeToggle: true   # remove if you want light/dark later
+  disableThemeToggle: false  # light/dark toggle in the header (dark = Catppuccin Mocha, light = PaperMod default)
 
   profileMode:
     enabled: false
@@ -44,10 +44,10 @@ params:
     Content: |
       I am a second-year PhD student in Computer Science at the Karlsruhe Institute of Technology (KIT), Germany, 
       and part of the [**Logic of Autonomous Dynamical Systems**](https://logic.kastel.kit.edu/) research group advised 
-      by [**Prof. André Platzer**](https://symbolaris.com/index.html). My current research involves devoloping logical 
-      methods for proving safety of continuous and hybdrid dynamical systems.
+      by [**Prof. André Platzer**](https://symbolaris.com/index.html). My current research involves developing logical
+      methods for proving safety of continuous and hybrid dynamical systems.
 
-      Prior to joining KIT, I was a master's student at Virginia Tech, USA, primarily researching nonlinear control theory and safety-critial robotics.
+      Prior to joining KIT, I was a master's student at Virginia Tech, USA, primarily researching nonlinear control theory and safety-critical robotics.
 
     imageUrl: "/img/ppanja.jpg"
     imageTitle: profile
@@ -60,7 +60,7 @@ params:
   ShowReadingTime: false
   ShowShareButtons: false
   ShowPostNavLinks: false
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: false
   ShowWordCount: true
   ShowRssButtonInSectionTermList: false
@@ -84,8 +84,8 @@ params:
 
   label:
     text:
-    icon: /apple-touch-icon.png
-    iconHeight: 
+    icon: images/cat-github.jpg   # relative to assets/; header logo links to home
+    iconHeight: 40
 
 menu:
   main:
@@ -98,7 +98,7 @@ menu:
       url: /publications/
       weight: 20
     - identifier: teaching
-      name: Teaching
+      name: "Teaching & Service"
       url: /teaching/
       weight: 25
     - identifier: cv

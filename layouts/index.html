@@ -1,0 +1,6 @@
+{{- define "main" }}
+{{- /* Home page: profile + latest news, then selected publications.
+     Replaces PaperMod's default recent-pages listing. */ -}}
+{{- partial "home_info.html" . }}
+{{- partial "selected_publications.html" . }}
+{{- end }}

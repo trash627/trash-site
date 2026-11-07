@@ -1,13 +1,15 @@
 ---
 date: '2025-11-20T10:00:00+01:00'
-draft: true
+draft: false
 title: 'Correct-by-Construction Barrier Certificate Synthesis for Safety Verification of Continuous Dynamical Systems'
 authors: ['Promit Panja', 'André Platzer']
+featured: true
 venue: '64th IEEE Conference on Decision and Control (CDC), Rio de Janeiro, Brazil, December 9-12'
 year: 2025
 doi: '10.1109/CDC57313.2025.11312663'
 pdf: ''
 github: ''
+image: 'img/publications/barrier.jpg'
 bibtex: |
   @inproceedings{DBLP:conf/cdc/PanjaP25,
     author       = {Promit Panja and
@@ -27,5 +29,3 @@ bibtex: |
   }
 
 ---
-
-We develop a formal synthesis procedure for generating provably safe controllers for autonomous vehicles operating in uncertain environments.

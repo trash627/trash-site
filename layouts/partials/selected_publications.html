@@ -1,0 +1,17 @@
+{{- /* Home page section: publications with params.featured = true, newest first. */ -}}
+{{- $pubs := where site.RegularPages "Section" "publications" }}
+{{- $pubs = where $pubs "Params.featured" true }}
+{{- $pubs = sort $pubs "Date" "desc" }}
+
+<section class="selected-pubs">
+  <h3 class="section-title">Selected Publications</h3>
+  {{- if $pubs }}
+  <div class="publications-list">
+    {{- range $pubs }}
+    {{- partial "pub_entry.html" (dict "page" . "full" false) }}
+    {{- end }}
+  </div>
+  {{- else }}
+  <p class="no-projects">No selected publications yet.</p>
+  {{- end }}
+</section>
