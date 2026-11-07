@@ -1,4 +1,4 @@
-baseURL: "http://localhost:1313/"
+baseURL: "https://trash627.github.io/trash-site/"
 languageCode: "en-us"
 title: Promit Panja
 pagination: 
@@ -22,7 +22,7 @@ params:
   description: "Doctoral Researcher"
   keywords: ["Formal Methods", "Logic", "Dynamical Systems"]
   author: Promit Panja
-  images: ["/img/ppanja.jpg"]
+  images: ["img/ppanja.jpg"]
   defaultTheme: dark
   disableThemeToggle: false  # light/dark toggle in the header (dark = Catppuccin Mocha, light = PaperMod default)
 
@@ -49,7 +49,7 @@ params:
 
       Prior to joining KIT, I was a master's student at Virginia Tech, USA, primarily researching nonlinear control theory and safety-critical robotics.
 
-    imageUrl: "/img/ppanja.jpg"
+    imageUrl: "img/ppanja.jpg"
     imageTitle: profile
     imageWidth: 200
     imageHeight: 200
@@ -76,11 +76,11 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "/favicon.ico"
-    favicon16x16: "/favicon-16x16.png"
-    favicon32x32: "/favicon-32x32.png"
-    apple_touch_icon: "/apple-touch-icon.png"
-    safari_pinned_tab: "/safari-pinned-tab.svg"
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
+    safari_pinned_tab: "safari-pinned-tab.svg"
 
   label:
     text:

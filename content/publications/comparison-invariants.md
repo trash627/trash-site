@@ -21,7 +21,7 @@ bibtex: |
     publisher = {EasyChair},
     bibsource = {EasyChair, https://easychair.org},
     issn      = {2398-7340},
-    url       = {/publications/paper/9ZkQ},
+    url       = {https://easychair.org/publications/paper/9ZkQ},
     doi       = {10.29007/5zft},
     pages     = {381-400},
     year      = {2026}

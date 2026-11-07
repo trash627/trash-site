@@ -2,7 +2,7 @@
 date: '{{ .Date }}'
 draft: true
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-image: '/img/project-placeholder.png'
+image: 'img/project-placeholder.png'
 subsection: 'formal-methods'
 excerpt: 'A brief overview of the research project.'
 ---
