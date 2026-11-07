@@ -530,6 +530,14 @@
     }
 }
 
+/* Page header description */
+.post-description {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .pub-actions {
